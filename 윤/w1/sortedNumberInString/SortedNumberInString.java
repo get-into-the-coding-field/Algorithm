@@ -1,14 +1,14 @@
-package 윤;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package 윤.w1.sortedNumberInString;
 
 /*
     프로그래머스 120850번 : 문자열 정렬하기
 */
 
-public class _w1_SortedNumberInString {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class SortedNumberInString {
     public static void main(String[] args) throws Exception {
         Solution solution = new Solution();
 //        int[] numbers = {1, 2, 3, 4, 5};
