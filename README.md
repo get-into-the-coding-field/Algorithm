@@ -7,8 +7,8 @@
 
 ### 📍 Progress Record
 
-|                         |                                         윤                                          |                                                    시또제                                                     | 인절미맛 | 마요 |
-| :---------------------: | :---------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :------: | :--: |
-|         GitHub          |                         [yun](https://github.com/yunji1201)                         |                                     [시또제](https://github.com/leesiyun)                                     |          |      |
-|        Language         |                                      **JAVA**                                       |                                                **JavaScript**                                                 |          |      |
-| Week 01</br>(23.02.06.) | [w1](https://github.com/get-into-the-coding-field/Algorithm/tree/main/%EC%9C%A4/w1) | [✅](https://github.com/get-into-the-coding-field/Algorithm/tree/main/시또제/hackerRank/electronics-shop.mdx) |          |
+|                         |                                         윤                                          |                                                    시또제                                                     | 인절미맛 | 마요 | 유승우                                 |
+| :---------------------: | :---------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :------: | :--: | -------------------------------------- |
+|         GitHub          |                         [yun](https://github.com/yunji1201)                         |                                     [시또제](https://github.com/leesiyun)                                     |          |      | [유승우](https://github.com/berenickt) |
+|        Language         |                                      **JAVA**                                       |                                                **JavaScript**                                                 |          |      | JavaScript                             |
+| Week 01</br>(23.02.06.) | [w1](https://github.com/get-into-the-coding-field/Algorithm/tree/main/%EC%9C%A4/w1) | [✅](https://github.com/get-into-the-coding-field/Algorithm/tree/main/시또제/hackerRank/electronics-shop.mdx) |          |      |                                        |
