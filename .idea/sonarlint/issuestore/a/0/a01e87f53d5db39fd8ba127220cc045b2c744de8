@@ -1,0 +1,12 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÒïÒ
+f	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÒïÒ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÓñÎ™ýÿÿÿÿ
+Ž
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ8Õ®³¶â0
+S	java:S106"9Replace this use of System.out or System.err by a logger.(©õ»žÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(–¿±Ÿýÿÿÿÿ
+X
+java:S6353"=Use concise character class syntax '\\D' instead of '[^0-9]'.(…Ù™¦ûÿÿÿÿ
+[
+java:S1612">Replace this lambda with method reference 'Integer::parseInt'.(ÚÐ÷Ù8Åå²¶â0
