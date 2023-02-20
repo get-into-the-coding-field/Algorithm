@@ -1,0 +1,30 @@
+name: Edit README file
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  edit_readme:
+    if: github.event.pull_request.merged && github.event.pull_request.user.login == 'specific_person'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Edit README
+        run: |
+          # Edit the README file
+          sed -i 's/old_content/new_content/g' README.md
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Update README file for merge by specific_person'
+          add: 'README.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
