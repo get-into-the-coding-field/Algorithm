@@ -5,3 +5,5 @@ function solution(numbers) {
   const answer = sum / numbers.length;
   return answer;
 }
+
+//reduce 함수를 이용한 평균값 구하기
