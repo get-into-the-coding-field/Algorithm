@@ -1,65 +1,7 @@
 '''
 백준 17135. 캐슬 디펜스
+https://www.acmicpc.net/problem/17135
 '''
-
-import sys
-input = sys.stdin.readline
-from collections import deque
-from itertools import combinations
-
-N, M, D = map(int, input().split())
-
-matrix = []
-answer = 0
-
-for _ in range(N):
-    line = list(map(int, input().split()))
-    matrix.append(line)
-    
-dx = [0, -1, 0]
-dy = [-1, 0, 1]
-
-def kill(archor):
-    tmp_matrix = [matrix[i][:] for i in range(N)]
-    killed = [[0] * M for i in range(N)]
-    result = 0
-    
-    for i in range(N-1, -1, -1):
-        current_killed = []
-        
-        for a in archor:
-            q = deque([(i, a, 1)])
-            
-            while q:
-                x, y, d = q.popleft()
-                if tmp_matrix[x][y] == 1:
-                    current_killed.append([x, y])
-                    if killed[x][y] == 0:
-                        killed.append([x, y])
-                        result += 1
-                    break
-                # 최대 사거리가 아직 남았다면 (활을 더 멀리 쏠 수 있다면)
-                if d < D:
-                    for i in range(3):
-                        nx = x + dx[i]
-                        ny = y + dy[i]
-                        
-                        if 0 <= nx < N and 0 <= ny < M:
-                            q.append([nx, ny, d+1])
-                            
-        for x, y in current_killed:
-            tmp_matrix[x][y] = 0
-                
-    return result
-        
-    
-
-archor_pos = list(combinations([i for i in range(M)], 3))
-
-for a in archor_pos:
-    answer = max(answer, kill(a))
-
-print(answer)
 
 
 
@@ -73,3 +15,55 @@ print(answer)
 0 0 0 0 0
 1 1 1 1 1
 '''
+
+from itertools import combinations
+from collections import deque
+import copy
+
+n, m, D = map(int, input().split())
+maps = [list(map(int, input().split())) for _ in range(n)]
+answer = 0
+direction = [(0, -1), (-1, 0), (0, 1)]
+
+    
+    
+def shoot_arrow(archers):
+    tmp_maps = [maps[i][:] for i in range(n)]
+    killed = [[0] * m for _ in range(n)]
+    count = 0
+    
+    for i in range(n-1, -1, -1):
+        this_turn = []
+        
+        for a in archers:
+            q = deque([])
+            q.append((i, a, 1))
+            
+            while q:
+                x, y, d = q.popleft()
+                
+                if tmp_maps[x][y] == 1:
+                    this_turn.append((x, y))
+
+                    if killed[x][y] == 0:
+                        killed[x][y] = 1
+                        count += 1
+                    break
+                
+                if d < D:
+                    for j in range(3):
+                        nx = x + direction[j][0]
+                        ny = y + direction[j][1]
+                        
+                        if 0 <= nx < n and 0 <= ny < m:    
+                            q.append((nx, ny, d+1))
+        for x, y in this_turn:
+            tmp_maps[x][y] = 0
+    return count
+                
+archer_combi = list(combinations([i for i in range(m)], 3))
+for combi in archer_combi:
+    answer = max(answer, shoot_arrow(combi))
+    
+print(answer)
+
