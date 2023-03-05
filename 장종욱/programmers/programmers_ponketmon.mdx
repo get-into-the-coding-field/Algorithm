@@ -1,0 +1,64 @@
+# 완주하지 못한 선수
+
+🔗 [problem](https://school.programmers.co.kr/learn/courses/30/lessons/42576?language=python3)
+
+수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
+
+마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
+
+<br />
+
+## 입출력 예 설명
+
+예제 #1
+"leo"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #2
+"vinko"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #3
+"mislav"는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
+
+<br />
+
+
+## 샘플 입력 participant = ["leo", "kiki", "eden"] , completion = ["eden", "kiki"]
+
+```
+"leo"
+```
+
+<br />
+
+## 샘플 입력 participant = ["marina", "josipa", "nikola", "vinko", "filipa"], completion = ["josipa", "filipa", "marina", "nikola"]
+
+```
+"vinko"
+```
+
+<br />
+
+## 샘플 입력 participant = ["mislav", "stanko", "mislav", "ana"], completion = ["stanko", "ana", "mislav"]
+```
+"mislav"
+```
+<br />
+
+
+## solution 1 [hash를 이용한 풀이]
+
+```PYTHON
+
+def solution(participant, completion):
+    hashDict = {}
+    sumHash = 0
+    for part in participant:
+        hashDict[hash(part)] = part;
+        sumHash += hash(part);
+        
+    for comp in completion:
+        sumHash -= hash(comp);
+    
+    return hashDict[sumHash]
+
+```
