@@ -62,3 +62,28 @@ def solution(participant, completion):
     return hashDict[sumHash]
 
 ```
+
+1) HashMap 만들기
+- HashMap이란 Key-Value의 Pair를 관리하는 클래스이다.
+- 이 문제에서 Key는 hash한 값이 되겠고, Value는 각 선수의 이름으로 해둔다.
+
+2) HashMap에 Participant 추가하기
+- 'Hashing을 한다'라고도 표현하는데, HashMap에 Participant를 전부 추가해보자.
+- 위 코드의 동작방식은 다음 예시로 설명하는 것이 가장 쉽게 이해가 가능할 것이다.
+- (예) 표 안에 key, value 쌍으로 participant 요소들이 하나씩 들어감
+- HashMap을 보고나면 별게 아니다. 이 문제에서는 각 이름의 Hash 값을 구하고, 이 값들의 합을 구한다.
+- sumHash는 35가 된다.
+
+3) sumHash에서 완주한 선수의 Hash값 빼기
+- sumHash에서 완주자들을 제외시키면, 한 명만 남게 될 것이고 그 사람이 우리가 찾는 정답일 것이다.
+- 위와 동일하게 예제를 통해서 보자
+- Index 0: sumHash = 35-17 --> 18
+- Index 1: sumHash = 18-13 --> 5
+
+4) Value가 0이 아닌 참가자 찾기
+- 이쯤 되면 문제가 다 해결됐다고 볼 수 있다.
+- 남아있는 1명이 완주하지 못한 사람이니, sumHash == 5인 Key를 갖고 있는 사람을 찾으면,
+완주하지 못한 선수가 나온다.
+- 그래서 hashDict[sumHash]라는 코드가 나오게 된다.
+
+
