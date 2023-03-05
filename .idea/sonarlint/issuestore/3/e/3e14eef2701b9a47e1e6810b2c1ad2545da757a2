@@ -1,0 +1,14 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(•¨ï-
+o
+java:S2293Y"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÂüºÞ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ñµú®
+‡
+java:S1130
+"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¼˜×ý
+g
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(•¨ï-
+m
+java:S6204*"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Üªýìÿÿÿÿÿ
