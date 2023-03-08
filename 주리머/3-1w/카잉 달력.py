@@ -7,6 +7,7 @@ https://www.acmicpc.net/problem/6064
 10 12 7 2
 13 11 5 6
 
+
 1
 10 12 3 9
 '''
@@ -17,6 +18,16 @@ https://www.acmicpc.net/problem/6064
 # 1. x, y를 1씩 증가시키면서 M, N이 되면 종료
 
 n = int(input())
+# 10, 12 ,3 , 9
+def calculate(m, n, x, y):
+    k = x #k를 x로 초기화
+    
+    while k <= m * n: #k의 범위는 m*n을 넘을 수 없기에
+        # print(f'k: {k}, x: {x}, y: {y}, m: {m}, n: {n}')
+        if (k - x) % m == 0 and (k - y) % n == 0: #2개의 조건을 만족하는 k값을 찾는다.
+            return k
+        k += m #k-x가 m의 배수이기 때문에 k는 x로 초기화해주었기 때문에 m만 더해준다.
+    return -1
 
 for _ in range(n):
     N, M, x, y = map(int, input().split())
@@ -24,24 +35,5 @@ for _ in range(n):
     countY = 1
     year = 1
     
-    while True:
-        # print(f'{year}번째 해: {countX}, {countY}')
-        if countX == x and countY == y:
-            break
-        
-        if countX == N and countY == M:
-            year = -1
-            break
-        
-        if countX < N:
-            countX += 1
-        else:
-            countX = 1
-        
-        if countY < M:
-            countY += 1
-        else:
-            countY = 1
-        
-        year += 1
-    print(year)
+    
+    print(calculate(N, M, x, y))
