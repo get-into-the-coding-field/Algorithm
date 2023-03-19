@@ -1,0 +1,137 @@
+# Counting Valleys
+
+🔗 [problem](https://www.hackerrank.com/domains/algorithms?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=problem-solving)
+
+열성적인 등산가는 그들의 하이킹을 꼼꼼하게 기록합니다.  
+정확히 "steps" 단계를 밟은 마지막 하이킹에서, 모든 단계마다 오르막, "U" 또는 내리막 "D" 단계인지 확인됩니다.  
+하이킹은 항상 해수면에서 시작하고 끝나며, 상승 또는 하강할 때마다 고도가 "1" 단위 변화를 나타냅니다. 다음 용어를 정의합니다.
+
+산은 해수면에서 한 단계 올라가는 것으로 시작하여 한 단계 내려가는 것으로 끝나는 해수면 위의 연속된 단계입니다.
+계곡은 해수면보다 낮은 단계부터 시작하여 해수면까지의 단계까지 연속적으로 이어지는 단계입니다.
+하이킹 중 오르내리는 스텝의 순서를 고려하여, 걸어간 계곡의 수를 찾아 인쇄합니다.
+
+<br />
+
+## 예제
+
+`steps = 8path = [DDUUUUDD]`
+
+등산객은 먼저 "2"단위 깊이의 계곡으로 들어갑니다. 그리고 나서 그들은 "2" 단위 높이의 산 위로 올라갑니다.  
+마침내, 하이커는 해수면으로 돌아와 하이킹을 끝냅니다.
+
+## 기능 설명
+
+아래 편집기에서 Counting Valleys 기능을 완료합니다.
+counting Valley에는 다음 파라미터가 있습니다.
+
+- int steps: 하이킹의 계단 수
+- string path: 경로를 설명하는 문자열
+
+<br />
+
+## Returns
+
+- int: 통과된 계곡 수
+
+<br />
+
+## 입력 형식
+
+첫 번째 줄에는 하이킹의 단계 수인 정수 "steps"가 포함됩니다.
+두 번째 줄에는 경로를 설명하는 "steps" 문자의 단일 문자열 "path"가 포함됩니다.
+
+<br />
+
+## 제약
+
+- `2 ≤ steps ≤ 10^6`
+- `path[i] ∈ {U D}`
+
+<br />
+
+## 샘플 입력 0
+
+```
+8
+UDDDUDUU
+```
+
+<br />
+
+## 샘플 출력 0
+
+```
+1
+```
+
+<br />
+
+## 설명 0
+
+\_을 해수면으로, 상승은 /로, 하강은 \로 나타낸다면, 상승은 다음과 같이 그려질 수 있습니다.
+
+```
+_/\      _
+   \    /
+    \/\/
+```
+
+등산객은 한 계곡을 드나듭니다.
+
+<br />
+
+## solution
+
+```JS
+const countingValleys = (steps, path) => {
+    let currentSeaLevel = 0;
+    let vallayCount = 0;
+    let vallayStatus = false;
+    path = Array.from(path);
+    path.forEach((el) => {
+      el === "U" ? currentSeaLevel++ : currentSeaLevel--;
+      if (currentSeaLevel < 0 && !vallayStatus) {
+        vallayCount++;
+        vallayStatus = true;
+      } else if (currentSeaLevel >= 0 && vallayStatus) {
+        vallayStatus = false;
+      }
+    });
+    return vallayCount;
+};
+```
+
+아래의 풀이를 참고해서 풀었습니다.
+
+<br />
+
+## 다른 사람의 풀이 살펴보기
+
+🔗 [HackerRank’s Counting Valleys Challenge Simple Javascript Solution](https://medium.com/swlh/hackerranks-counting-valleys-challenge-c21e51d6ce9d)
+
+```JS
+function countingValleys(n, s) {
+let steps = s.split("");
+let valleyCount = 0;
+let currentSeaLevel = 0;
+let valleyStatus = false;
+steps.forEach(step => {
+  step === 'U' ? currentSeaLevel++ : currentSeaLevel--;
+    if(currentSeaLevel < 0 && !valleyStatus) {
+      valleyCount++;
+      valleyStatus = true
+    } else if(currentLevel >= 0 && valleyStatus) {
+      valleyStatus= false
+    }
+  })
+  return valleyCount;
+}
+```
+
+**배운 것**
+
+- - 1 은 ++로 표현합니다.
+- 변수이름은 길더라도 이해하기 쉽게 알기 쉽게 짓습니다.
+- React를 주로 사용할 것이기 때문에 State를 사용합니다.
+
+<br />
