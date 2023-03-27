@@ -1,11 +1,0 @@
-
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ถ๛าผ
-
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ูุคÞýÿÿÿÿ8þยว่0
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(ฏ๘’ษÿÿÿÿÿ8þยว่0
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(๎–ษüÿÿÿÿ8•þยว่0
-M
-java:S1128"+Remove this unused import 'java.util.List'.(ี๋ฑฤ๘ÿÿÿÿ8•þยว่0
-Z
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(ำ๓บด๚ÿÿÿÿ8•þยว่0
