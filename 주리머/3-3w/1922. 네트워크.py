@@ -16,8 +16,10 @@ https://www.acmicpc.net/problem/1922
 
 '''
 import sys
+import heapq as hq
 input = sys.stdin.readline
 
+# 크루스칼 알고리즘
 def findParents(parents, x):
     if parents[x] != x:
         parents[x] = findParents(parents, parents[x])
@@ -52,6 +54,43 @@ def solution():
         else:
             unionParents(parents, start, end)
             answer += distance
+    return answer
+
+print(solution())
+
+
+# 프림 알고리즘
+def solution():
+    N = int(input())
+    M = int(input())
+    vertex = []
+    edges = [[] for _ in range(N+1)]
+    answer = 0
+    mst = []
+    
+    
+    for _ in range(M):
+        s, e, d = map(int, input().split())
+        edges[s].append((d, e))
+        edges[e].append((d, s))
+
+
+    # 정점 1 방문처리
+    for d, e in edges[1]:
+        hq.heappush(vertex, (d, e))
+    mst.append(1)
+    
+    
+    while vertex:
+        distance, end = hq.heappop(vertex)
+
+        if end not in mst:    
+            mst.append(end)
+            answer += distance
+            
+            for d, e in edges[end]:
+                hq.heappush(vertex, (d, e))
+
     return answer
 
 print(solution())
