@@ -41,7 +41,7 @@
 
 <br />
 
-## solution 1 
+## solution 1 [+1과 -1을 이용한 풀이]
 
 ```PYTHON
 
@@ -61,5 +61,30 @@ def solution(s):
         return False
     
     return True
+
+```
+
+<br />
+
+## solution 2 [stack 이용한 풀이]
+
+```PYTHON
+
+def solution(s):
+    stack = []
     
+    for c in s:
+        if c == "(":
+            stack.append(c)
+        else:
+            if stack:
+                stack.pop()
+            else:
+                return False
+            
+    if stack:
+        return False
+    
+    return True
+
 ```
