@@ -1,0 +1,14 @@
+
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô­ç‰
+7
+java:S1643"Use a StringBuilder instead.(ÙŸ²šýÿÿÿÿ
+2
+java:S1643"Use a StringBuilder instead.(·¶¬Í
+2
+java:S1643"Use a StringBuilder instead.(×Å÷¯
+7
+java:S16437"Use a StringBuilder instead.(ßŠÂªÿÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íš‚Ë
+‡
+java:S1130	"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÑµùÛûÿÿÿÿ

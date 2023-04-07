@@ -1,0 +1,16 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»‡«Φύÿÿÿÿ
+
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ΩΨ¤ήύÿÿÿÿ8•σήρ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ξªκγ8ΧΏσήρ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ξά¬…8ΧΏσήρ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ξªκγ8ΧΏσήρ0
+e
+java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ϋΫΖέ8Βτήρ0
+n
+java:S6204D"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Έµ8ή›υήρ0
+t
+java:S3776K"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ΞτΧίÿÿÿÿÿ8ΧΥτήρ0
+[
+java:S1854b"9Remove this useless assignment to local variable "count".(Ά™½όÿÿÿÿ8ΧΥτήρ0
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(έΧΤ§ωÿÿÿÿ8ΨΥτήρ0
