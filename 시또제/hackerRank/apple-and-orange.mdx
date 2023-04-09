@@ -1,0 +1,151 @@
+# Apple and Orange
+
+🔗 [problem](https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true)
+
+샘의 집에는 많은 과일을 생산하는 사과나무와 오렌지 나무가 있습니다.  
+아래에 주어진 정보를 사용하여, 샘의 집에 떨어진 사과와 오렌지의 수를 구하시오.
+
+아래 다이어그램에서 다음을 참조하십시오.
+
+빨간색 영역은 집을 나타냅니다. `s`는 시작점이고 `t`는 끝점입니다. 사과나무는 집 왼쪽에 있고, 오렌지나무는 집 오른쪽에 있습니다.
+사과나무가 `a` 지점에 오렌지나무가 `b` 지점에 있다고 가정합니다.
+과일이 나무에서 떨어질 때, `x` 축을 따라 그것의 나무로부터 `d` 단위의 거리에 떨어집니다.
+
+_`d`가 음의 값인 경우 과일이 나무 왼쪽에서 `d` 만큼 거리에 떨어졌다는 것을 의미하고, `d`의 양의 값인 경우 나무 오른쪽으로 부터 `d` 만큼 거리에 떨어졌다는 것을 의미합니다. _
+
+![](https://s3.amazonaws.com/hr-challenge-images/25220/1474218925-f2a791d52c-Appleandorange2.png)
+
+`d`의 `m` 사과와 `n` 오렌지 값을 감안할 때, 얼마나 많은 사과와 오렌지 샘의 집(즉,에서 포괄적 범위 `[s,t]`)에 빠질 것인지를 결정해요?
+
+예를 들어, 샘의 집이`s = 7` 과 `t = 10` 사이에 있에 있고 사과 나무는 `a = 4`, 오랜지 나무는 `b = 12` 에 위치해 있습니다. 사과 `m = 3`과 오렌지 `n =3`가 있습니다. 사과는 `a`에서 `apple = [2, 3, -4]` 단위 거리, `oranges = [3, -2, -4]` 단위 거리입니다. 각 사과 거리를 트리의 위치에 더하면 `[4 + 2, 4 + 3, 4 + - 4] = [6, 7, 0]`에 도달합니다.  
+오렌지는 `[12 + 3, 12 + 2, 12 + 4] = [15, 10, 8]`에 도달합니다.  
+사과 한 개와 오렌지 두 개가 포함 범위 `7 - 10`에 도달하기 때문에 아래와 같이 반환됩니다.
+
+```
+1
+2
+```
+
+<br />
+
+## 기능 설명
+
+아래 편집기에서 countApplesAndOranges 함수를 완성 하세요. Sam의 집에 떨어지는 사과와 오렌지의 수를 각각 별도의 줄에 인쇄해야 합니다.
+
+countApplesAndOranges에는 다음 매개변수가 있습니다.
+
+- s : 정수, Sam의 집 위치 시작점.
+- t : 정수, Sam의 집 위치의 끝 위치.
+- a : 정수, 사과 나무의 위치.
+- b : 정수, 오렌지 트리의 위치.
+- apples : 정수 배열, 각 사과가 나무에서 떨어지는 거리.
+- oranges : 정수 배열, 각 오렌지가 나무에서 떨어지는 거리.
+  <br />
+
+## 입력 형식
+
+첫 번째 줄에는 각각의 값을 나타 내는 두 개의 공백으로 구분된 정수가 포함됩니다. `s` 그 리고 `t`.  
+두 번째 줄에는 각각의 값을 나타내는 두 개의 공백으로 구분된 정수가 포함되어 있습니다. `a` 그 리고 `b`.  
+세 번째 줄에는 각각의 값을 나타내는 두 개의 공백으로 구분된 정수가 포함되어 있습니다. `m` 그 리고 `n`.  
+네 번째 줄에는 `m` 각 사과가 점에서 떨어지는 각각의 거리를 나타내는 공백으로 구분된 정수. `a`  
+다섯 번째 줄에는 `n` 각 주황색이 점에서 떨어지는 각 거리를 나타내는 공백으로 구분된 정수. `b`
+
+<br />
+
+## 제약
+
+- `1 ≤ s, t, a, b, m, n ≤ 10^5`
+- `-10^5 ≤ d ≤ 10^5`
+- `a < s < t < b`
+
+<br />
+
+## 출력 형식
+
+두 개의 다른 행에 두 개의 정수를 인쇄하십시오.
+
+1. 첫 번째 정수: Sam의 집에 떨어진 사과의 수.
+2. 두 번째 정수: Sam의 집에 떨어지는 오렌지의 수.
+
+<br />
+
+## 샘플 입력 0
+
+```
+7 11
+5 15
+3 2
+-2 2 1
+5 -6
+```
+
+<br />
+
+## 샘플 출력 0
+
+```
+1
+1
+```
+
+<br />
+
+## 설명 0
+
+첫 번째 사과가 제자리에 떨어진다. `5 - 2 = 3`.
+두 번째 사과가 제자리에 떨어집니다. `5 + 2 = 7`.
+세 번째 사과가 제자리에 떨어집니다. `5 + 1 = 6`.
+첫 번째 오렌지가 제자리에 떨어집니다. `15 + 5 = 2-`.
+두 번째 오렌지가 위치에 떨어집니다. `15 - 6 = 9`.
+하나의 과일(두 번째 사과)만 사이의 영역에 속합니다. `7` 그리고 `11`, 그래서 우리는 인쇄 `1` 첫 번째 출력 라인으로.
+두 번째 오렌지만 다음 영역에 속합니다. `7` 그리고, `11` 그래서 우리는 인쇄 `1` 두 번째 출력 라인으로.
+
+<br />
+
+## solution
+
+```JS
+  const countApplesAndOranges = (s, t, a, b, apples, oranges) => {
+    console.log(
+      apples.filter((apple) => apple >= s - a && apple <= t - a).length
+    );
+    console.log(
+      oranges.filter((orange) => orange >= s - b && orange <= t - b).length
+    );
+  };
+```
+
+<br />
+
+## 다른 사람의 풀이 살펴보기
+
+```JS
+console.log(apples.filter(apple => a + apple >= s && a + apple <= t).length);
+console.log(oranges.filter(orange => b + orange >= s && b + orange <= t).length);
+```
+
+대부분의 사람들은 플러스(+)를 해서 풀었는데 이 편이 좀 더 계산하기 쉬워보입니다.
+
+<br />
+
+**다른 사람의 풀이를 보고 코드 수정해보기**
+
+```JS
+  const countApplesAndOranges = (s, t, a, b, apples, oranges) => {
+    console.log(
+      apples.filter((apple) => apple + a >= s && apple + a <= t).length
+    );
+    console.log(
+      oranges.filter((orange) => orange + b >= s && orange + b <= t).length
+    );
+  };
+```
+
+<br />
+
+## 지식 쌓기
+
+🔗 [in 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/in)  
+🔗 [for...in](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in)
+
+<br />
