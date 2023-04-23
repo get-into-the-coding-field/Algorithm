@@ -1,0 +1,17 @@
+
+I
+java:S1121O".Extract the assignment out of this expression.(”¹Ýôüÿÿÿÿ
+K
+java:S1066€"/Merge this if statement with the enclosing one.( Ü–¬ýÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï˜¥¢øÿÿÿÿ
+Ž
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ8Ô¿§‡ô0
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Îªêã
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Àä×¼úÿÿÿÿ8Õ¿§‡ô0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Îªêã8Ö¿§‡ô0
+5
+java:S16594"Declare "j" on a separate line.(ˆûÞÌ
+U
+java:S1854O":Remove this useless assignment to local variable "answer".(”¹Ýôüÿÿÿÿ
+A
+java:S1481?"+Remove this unused "answer" local variable.(åí¢é

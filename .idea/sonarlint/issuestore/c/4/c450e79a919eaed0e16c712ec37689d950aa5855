@@ -1,0 +1,22 @@
+
+7
+java:S1643^"Use a StringBuilder instead.(Îþã¼ÿÿÿÿÿ
+2
+java:S1643n"Use a StringBuilder instead.(«…Ü¦
+2
+java:S1643p"Use a StringBuilder instead.(âÙ›î
+2
+java:S1643}"Use a StringBuilder instead.(’Àãû
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½³ñýÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(Îªêã
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ì×‚åøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Îªêã
+>
+java:S1125_"(Remove the unnecessary boolean literals.(…ŽÆò
+C
+java:S1125~"(Remove the unnecessary boolean literals.(ÊËúšþÿÿÿÿ
+v
+java:S1149ˆ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
