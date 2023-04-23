@@ -1,0 +1,92 @@
+# Birthday Cake Candles
+
+🔗 [problem](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)
+
+당신은 아이의 생일 케이크를 담당하고 있습니다.  
+당신은 케이크에 그들의 총 연령의 해마다 하나의 양초가 있을 것이라고 결정했습니다. 그  
+들은 가장 높은 양초만 끌 수 있을 것입니다.  
+얼마나 많은 양초가 가장 높은지 세십시오.
+
+<br />
+
+## 예시
+
+`candles = [4, 4, 1, 3]`
+최대 높이 양초는 `4`이고 `2`개 있습니다. 그래서 `2`를 반환합니다..
+
+<br />
+
+## 기능 설명
+
+birthdayCakeCandles 아래 편집기 에서 기능을 완료하십시오.
+
+birthdayCakeCandles 에는 다음 매개변수가 있습니다.
+
+- int candles[n] : 양초 높이
+
+<br />
+
+## Return
+
+- int : 가장 높은 양초의 개수
+
+<br />
+
+## 입력 형식
+
+첫 번째 줄에는 `n` 단일 정수가 포함되어 있습니다. `candle[]`의 크기.
+두 번째 줄에는 공백으로 구분된 정수 `n`개, 여기서 각 정수의 높이를 설명합니다. `candles[i]`.
+
+<br />
+
+## 제약
+
+- 1 ≤ n ≤ 10^5
+- 1 ≤ candles[i] ≤ 10^7
+
+<br />
+
+## 샘플 입력 0
+
+```
+4
+3 2 1 3
+```
+
+<br />
+
+## 샘플 출력 0
+
+```
+2
+```
+
+<br />
+
+## 설명 0
+
+캔들 높이 `[3, 2, 1, 3]` 중 가장 높은 촛불의 단위가 `3`이고 그 갯수가 `2`입니다.
+
+<br />
+
+## solution
+
+```JS
+const birthdayCakeCandles = (candles) =>
+    candles.filter((candle) => candle === Math.max(...candles)).length;
+```
+
+한 줄로 작성하려고하니 `Time limit exceeded`에러가 발생해서 아래 코드로 수정했다.
+
+```JS
+const birthdayCakeCandles = (candles) => {
+    const max = Math.max(...candles);
+    return candles.filter((candle) => candle === max).length;
+};
+```
+
+<br />
+
+## 지식 쌓기
+
+<br />
